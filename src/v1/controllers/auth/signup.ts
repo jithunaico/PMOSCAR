@@ -16,17 +16,17 @@ let signup: RequestHandler = async (req: ISignupRequest, res) => {
   const user = new User({ email, password, role });
   await user.save();
 
-  const mailOptions = {
-    from: config.SMTP_FROM_EMAIL,
-    to: email,
-    subject: `Welcome`,
-    html: `
-          <div>
-            <h3>Hello: ${email}</h3>
-          </div>
-        `,
-  };
-  await emailService.sendSimpleMail(mailOptions);
+  // const mailOptions = {
+  //   from: config.SMTP_FROM_EMAIL,
+  //   to: email,
+  //   subject: `Welcome`,
+  //   html: `
+  //         <div>
+  //           <h3>Hello: ${email}</h3>
+  //         </div>
+  //       `,
+  // };
+  // await emailService.sendSimpleMail(mailOptions);
 
   res.send(user.toJSON());
 };
