@@ -1,8 +1,8 @@
 import { RequestHandler } from 'express';
 
-import handleErrorMiddleware from '../../../middleware/handle-error';
-import User from '../../../models/User';
-import { IQueryRequest } from '../../../interfaces/request';
+import handleErrorMiddleware from '../../middleware/handle-error';
+import User from '../../models/User';
+import { IQueryRequest } from '../../interfaces/request';
 
 let all: RequestHandler = async (req: IQueryRequest<{ role?: string }>, res) => {
   let query = {};

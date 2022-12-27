@@ -1,9 +1,8 @@
 import { Router } from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-import config from '../config/config';
-import AuthMiddleware from '../middleware/auth';
-
+import config from './config/config';
+import AuthMiddleware from './middleware/auth';
 import * as AuthController from './controllers/auth';
 import * as UserController from './controllers/user';
 import * as BookController from './controllers/book';
@@ -27,7 +26,6 @@ router.post('/book/add', BookController.add);
 router.get('/book/all', BookController.all);
 router.get('/book/search', BookController.search);
 
-// Dev routes
 if (config.isDevelopment) {
   router.use('/dev/api-docs', swaggerUi.serve);
   router.get('/dev/api-docs', swaggerUi.setup(apiSpec, swaggerUiOptions));
