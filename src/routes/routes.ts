@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import index from './index';
+import index from './web/index';
 
 const router = Router();
 
