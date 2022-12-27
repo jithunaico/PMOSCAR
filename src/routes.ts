@@ -1,10 +1,10 @@
 import { Router } from 'express';
 
-import v1 from './v1';
+import index from './index';
 
 const router = Router();
 
 // V1 routes
-router.use('/v1', v1);
+router.use('/pmis', index);
 
 export default router;

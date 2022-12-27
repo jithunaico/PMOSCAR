@@ -1,11 +1,11 @@
 import { RequestHandler, CookieOptions } from 'express';
 import moment from 'moment';
 
-import handleErrorMiddleware from '../../../middleware/handle-error';
-import User from '../../../models/User';
-import { JWT } from '../../../services/jwt';
-import config from '../../../config/config';
-import { IBodyRequest } from '../../../interfaces/request';
+import handleErrorMiddleware from '../../middleware/handle-error';
+import User from '../../models/User';
+import { JWT } from '../../services/jwt';
+import config from '../../config/config';
+import { IBodyRequest } from '../../interfaces/request';
 
 const JWTService = new JWT(config);
 
