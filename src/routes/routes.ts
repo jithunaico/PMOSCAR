@@ -4,7 +4,11 @@ import index from './web/index';
 
 const router = Router();
 
-// V1 routes
+// web routes
 router.use('/pmis', index);
+
+//TODO mob routes
+
+//TODO admin routes
 
 export default router;
