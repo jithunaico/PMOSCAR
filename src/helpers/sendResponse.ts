@@ -62,6 +62,7 @@ const sendResponse = (statusCode: number, data = {}, sendMessage = '') => {
   }
 };
 
+
 module.exports = {
   sendResponse,
 };
