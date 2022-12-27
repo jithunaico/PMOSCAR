@@ -7,7 +7,7 @@ import cors from 'cors';
 import express, { Request, Response, NextFunction } from 'express';
 
 import { ApplicationError, NotFoundError } from './errors';
-import routes from './routes';
+import routes from './routes/routes';
 import config from './config/config';
 
 const app = express();

@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-import config from './config/config';
-import AuthMiddleware from './middleware/auth';
-import * as AuthController from './controllers/auth';
-import * as UserController from './controllers/user';
-import * as BookController from './controllers/book';
-import apiSpec from './openapi.json';
+import config from '../../config/config';
+import AuthMiddleware from '../../middleware/auth';
+import * as AuthController from '../../controllers/auth';
+import * as UserController from '../../controllers/user';
+import * as BookController from '../../controllers/book';
+import apiSpec from '../../openapi.json';
 
 const router = Router();
 
